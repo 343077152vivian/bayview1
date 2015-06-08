@@ -17,19 +17,20 @@
               </block>
             </value>
             <statement name="DO0">
-              <block type="movement_left" id="343"></block>
+              <block type="movement_forward" id="425"></block>
             </statement>
             <value name="IF1">
               <block type="sensor_object" id="384">
-                <field name="OBJECT">LEFTFRONT</field>
+                <field name="OBJECT">LEFTSIDE</field>
               </block>
             </value>
             <statement name="DO1">
-              <block type="movement_forward" id="402"></block>
+              <block type="movement_right" id="435"></block>
             </statement>
           </block>
         </statement>
       </block>
     </next>
   </block>
+  <block type="movement_left" id="343" x="-281" y="38"></block>
 </xml>
