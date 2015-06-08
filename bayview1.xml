@@ -4,24 +4,24 @@
       <block type="controls_whileUntil" id="204" inline="false">
         <field name="MODE">UNTIL</field>
         <value name="NUMBER">
-          <block type="sensor_object" id="326">
-            <field name="OBJECT">RIGHTSIDE</field>
+          <block type="math_number" id="482">
+            <field name="NUM">200</field>
           </block>
         </value>
         <statement name="DO">
           <block type="controls_if" id="196" inline="false">
             <mutation elseif="1"></mutation>
             <value name="IF0">
-              <block type="sensor_button" id="333">
-                <field name="OBJECT">DOWN</field>
+              <block type="sensor_button" id="458">
+                <field name="OBJECT">UP</field>
               </block>
             </value>
             <statement name="DO0">
-              <block type="movement_forward" id="425"></block>
+              <block type="movement_left" id="468"></block>
             </statement>
             <value name="IF1">
-              <block type="sensor_object" id="384">
-                <field name="OBJECT">LEFTSIDE</field>
+              <block type="sensor_button" id="451">
+                <field name="OBJECT">DOWN</field>
               </block>
             </value>
             <statement name="DO1">
@@ -32,5 +32,4 @@
       </block>
     </next>
   </block>
-  <block type="movement_left" id="343" x="-281" y="38"></block>
 </xml>
