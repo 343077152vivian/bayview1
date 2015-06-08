@@ -1,40 +1,44 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_repeat" id="520" inline="true" x="-830" y="-467">
-    <value name="TIMES">
-      <block type="math_number" id="567">
-        <field name="NUM">100</field>
-      </block>
-    </value>
-    <statement name="DO">
-      <block type="led_select" id="594" inline="true">
-        <field name="ACTION">ON</field>
-        <value name="LED">
-          <block type="sensor_object" id="601">
-            <field name="OBJECT">REAR</field>
+  <block type="movement_forward" id="726" x="-830" y="-493">
+    <next>
+      <block type="controls_repeat" id="520" inline="true">
+        <value name="TIMES">
+          <block type="math_number" id="567">
+            <field name="NUM">100</field>
           </block>
         </value>
-        <next>
-          <block type="controls_if" id="648" inline="false">
-            <mutation elseif="1"></mutation>
-            <value name="IF0">
-              <block type="sensor_object" id="670">
-                <field name="OBJECT">RIGHTFRONT</field>
+        <statement name="DO">
+          <block type="led_select" id="594" inline="true">
+            <field name="ACTION">ON</field>
+            <value name="LED">
+              <block type="sensor_object" id="601">
+                <field name="OBJECT">REAR</field>
               </block>
             </value>
-            <statement name="DO0">
-              <block type="movement_left" id="687"></block>
-            </statement>
-            <value name="IF1">
-              <block type="sensor_object" id="705">
-                <field name="OBJECT">LEFTFRONT</field>
+            <next>
+              <block type="controls_if" id="648" inline="false">
+                <mutation elseif="1"></mutation>
+                <value name="IF0">
+                  <block type="sensor_object" id="670">
+                    <field name="OBJECT">RIGHTFRONT</field>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="movement_left" id="687"></block>
+                </statement>
+                <value name="IF1">
+                  <block type="sensor_object" id="705">
+                    <field name="OBJECT">LEFTFRONT</field>
+                  </block>
+                </value>
+                <statement name="DO1">
+                  <block type="movement_right" id="715"></block>
+                </statement>
               </block>
-            </value>
-            <statement name="DO1">
-              <block type="movement_right" id="715"></block>
-            </statement>
+            </next>
           </block>
-        </next>
+        </statement>
       </block>
-    </statement>
+    </next>
   </block>
 </xml>
