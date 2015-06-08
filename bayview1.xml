@@ -1,35 +1,40 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="movement_forward" id="414" x="-92" y="27">
-    <next>
-      <block type="controls_whileUntil" id="204" inline="false">
-        <field name="MODE">UNTIL</field>
-        <value name="NUMBER">
-          <block type="math_number" id="482">
-            <field name="NUM">200</field>
+  <block type="controls_repeat" id="520" inline="true" x="-830" y="-467">
+    <value name="TIMES">
+      <block type="math_number" id="567">
+        <field name="NUM">100</field>
+      </block>
+    </value>
+    <statement name="DO">
+      <block type="led_select" id="594" inline="true">
+        <field name="ACTION">ON</field>
+        <value name="LED">
+          <block type="sensor_object" id="601">
+            <field name="OBJECT">REAR</field>
           </block>
         </value>
-        <statement name="DO">
-          <block type="controls_if" id="196" inline="false">
+        <next>
+          <block type="controls_if" id="648" inline="false">
             <mutation elseif="1"></mutation>
             <value name="IF0">
-              <block type="sensor_button" id="458">
-                <field name="OBJECT">UP</field>
+              <block type="sensor_object" id="670">
+                <field name="OBJECT">RIGHTFRONT</field>
               </block>
             </value>
             <statement name="DO0">
-              <block type="movement_left" id="468"></block>
+              <block type="movement_left" id="687"></block>
             </statement>
             <value name="IF1">
-              <block type="sensor_button" id="451">
-                <field name="OBJECT">DOWN</field>
+              <block type="sensor_object" id="705">
+                <field name="OBJECT">LEFTFRONT</field>
               </block>
             </value>
             <statement name="DO1">
-              <block type="movement_right" id="435"></block>
+              <block type="movement_right" id="715"></block>
             </statement>
           </block>
-        </statement>
+        </next>
       </block>
-    </next>
+    </statement>
   </block>
 </xml>
