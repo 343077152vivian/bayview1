@@ -1,66 +1,31 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_whileUntil" id="33" inline="false" x="35" y="96">
+  <block type="controls_whileUntil" id="204" inline="false" x="-90" y="46">
     <field name="MODE">UNTIL</field>
     <value name="NUMBER">
-      <block type="sensor_button" id="49">
-        <field name="OBJECT">ENTER</field>
+      <block type="sensor_object" id="326">
+        <field name="OBJECT">RIGHTFRONT</field>
       </block>
     </value>
     <statement name="DO">
-      <block type="controls_if" id="71" inline="false">
-        <mutation elseif="1" else="1"></mutation>
+      <block type="controls_if" id="196" inline="false">
+        <mutation elseif="1"></mutation>
         <value name="IF0">
-          <block type="logic_compare" id="99" inline="true">
-            <field name="OP">LT</field>
-            <value name="A">
-              <block type="sensor_object" id="142">
-                <field name="OBJECT">LEFTFRONT</field>
-              </block>
-            </value>
-            <value name="B">
-              <block type="math_number" id="149">
-                <field name="NUM">75</field>
-              </block>
-            </value>
+          <block type="sensor_button" id="333">
+            <field name="OBJECT">DOWN</field>
           </block>
         </value>
         <statement name="DO0">
-          <block type="movement_right" id="159"></block>
+          <block type="movement_left" id="343"></block>
         </statement>
         <value name="IF1">
-          <block type="logic_compare" id="270" inline="true">
-            <field name="OP">LT</field>
-            <value name="A">
-              <block type="sensor_object" id="278">
-                <field name="OBJECT">RIGHTFRONT</field>
-              </block>
-            </value>
-            <value name="B">
-              <block type="math_number" id="285">
-                <field name="NUM">75</field>
-              </block>
-            </value>
+          <block type="sensor_object" id="384">
+            <field name="OBJECT">LEFTFRONT</field>
           </block>
         </value>
         <statement name="DO1">
-          <block type="movement_left" id="296"></block>
+          <block type="movement_forward" id="402"></block>
         </statement>
-        <statement name="ELSE">
-          <block type="movement_forward" id="1"></block>
-        </statement>
-        <next>
-          <block type="robot_delay" id="203" inline="true">
-            <value name="DELAY">
-              <block type="math_number" id="248">
-                <field name="NUM">200</field>
-              </block>
-            </value>
-          </block>
-        </next>
       </block>
     </statement>
-    <next>
-      <block type="movement_stop" id="201"></block>
-    </next>
   </block>
 </xml>
